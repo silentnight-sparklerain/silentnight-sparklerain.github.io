@@ -1,0 +1,24 @@
+/* 固定背景图片 - 增强版 */
+#web_bg {
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 针对主页背景的额外选择器 */
+.full_page {
+  background-attachment: fixed !important;
+}
+
+/* 针对顶部图片区域 */
+#page-header {
+  background-attachment: fixed !important;
+}
+
+/* 确保背景覆盖整个屏幕 */
+#web_bg, .full_page, #page-header {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
