@@ -34,3 +34,32 @@
   background: #3ecdf1;
   color: #f2f2f2;
 }
+
+
+/* 导航栏背景虚化（毛玻璃效果） */
+#nav {
+    /* 核心代码：背景模糊 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* 兼容 Safari 浏览器 */
+    
+    /* 消除原本的纯色背景，改为半透明 */
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    
+    /* 增加一点底部阴影让它更立体（可选） */
+    box-shadow: 0 5px 6px -5px rgba(133, 133, 133, 0.6);
+    
+    /* 让切换动画更丝滑 */
+    transition: all 0.5s;
+}
+
+/* 如果你处于首页顶部（背景是透明时），为了文字清晰，可以稍微加深一点或者保持透明 */
+#page-header.not-top-img #nav {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* 适配深色模式（Dark Mode） */
+[data-theme="dark"] #nav {
+    /* 深色模式下背景变成半透明黑色 */
+    background-color: rgba(18, 18, 18, 0.6) !important;
+    box-shadow: 0 5px 6px -5px rgba(0, 0, 0, 0.6);
+}
