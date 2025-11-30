@@ -65,3 +65,21 @@
   color: #f2f2f2 !important;
   border-radius: 8px !important; /* 悬浮时保持圆角 */
 }
+
+
+/* ==========================
+    4. 【新增】目录 (TOC) 精简设置
+    ========================== */
+/* 
+    原理：Butterfly生成的目录class是 .toc-level-X
+    如果你用 ## 写大标题，那么它就是 level-2
+    ### 是 level-3
+    #### 是 level-4
+    
+    下面的代码意思就是：把 level-4 (####) 和更小的标题全部隐藏
+*/
+.toc-content .toc-level-4, 
+.toc-content .toc-level-5, 
+.toc-content .toc-level-6 {
+    display: none !important;
+}
