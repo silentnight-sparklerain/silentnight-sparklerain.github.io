@@ -1,4 +1,6 @@
-/* 页脚与头图透明 */
+/* ==================================
+   1. 页脚与头图透明 (保持原样)
+   ================================== */
 #footer {
   background: transparent !important;
 }
@@ -22,6 +24,9 @@
   background: transparent !important;
 }
 
+/* ==================================
+   2. 导航栏设置 (保持原样：纯透明+滑动隐藏)
+   ================================== */
 #nav {
   /* 背景纯透明 */
   background-color: transparent !important;
@@ -39,15 +44,23 @@
   background: transparent !important;
 }
 
-/* 小冰分类分类磁铁黑夜模式适配 */
+/* ==================================
+   3. 小冰分类磁铁黑夜模式适配 (只改了这里)
+   ================================== */
 /* 一般状态 */
 [data-theme="dark"] .magnet_link_context {
   background: #1e1e1e;
   color: antiquewhite;
+  /* 【关键】设置圆角，Butterfly主题默认一般是 8px */
   border-radius: 8px; 
+  /* 加上过渡，让颜色变化更丝滑 */
+  transition: all 0.3s;
 }
+
 /* 鼠标悬浮状态 */
 [data-theme="dark"] .magnet_link_context:hover {
   background: #3ecdf1;
   color: #f2f2f2;
+  /* 【关键】悬浮时也要保持圆角，否则会变回方角 */
+  border-radius: 8px;
 }
