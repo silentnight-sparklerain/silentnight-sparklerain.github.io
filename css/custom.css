@@ -47,20 +47,21 @@
 /* ==================================
    3. 小冰分类磁铁黑夜模式适配 (只改了这里)
    ================================== */
-/* 一般状态 */
-[data-theme="dark"] .magnet_link_context {
-  background: #1e1e1e;
-  color: antiquewhite;
-  /* 【关键】设置圆角，Butterfly主题默认一般是 8px */
-  border-radius: 8px; 
-  /* 加上过渡，让颜色变化更丝滑 */
-  transition: all 0.3s;
+[data-theme="dark"] #catalog_magnet .magnet_link_context {
+  background: #1e1e1e !important;
+  color: antiquewhite !important;
+  
+  /* 强制圆角 10px (你可以根据喜好改成 8px 或 12px) */
+  border-radius: 8px !important; 
+  
+  /* 加上边框过渡，防止圆角闪烁 */
+  transition: all 0.3s ease !important;
+  overflow: hidden !important; /* 防止内容溢出遮挡圆角 */
 }
 
 /* 鼠标悬浮状态 */
-[data-theme="dark"] .magnet_link_context:hover {
-  background: #3ecdf1;
-  color: #f2f2f2;
-  /* 【关键】悬浮时也要保持圆角，否则会变回方角 */
-  border-radius: 8px;
+[data-theme="dark"] #catalog_magnet .magnet_link_context:hover {
+  background: #3ecdf1 !important;
+  color: #f2f2f2 !important;
+  border-radius: 8px !important; /* 悬浮时保持圆角 */
 }
